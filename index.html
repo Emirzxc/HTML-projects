@@ -1,116 +1,159 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Эмир — Портфолио</title>
+    <title>Trail Club</title>
     <style>
-        /* Стили для того, чтобы медиаблоки выглядели аккуратно */
-        section {
-            margin-bottom: 30px;
+        body {
+            font-family: serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #000;
+            line-height: 1.4;
         }
-        .media-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        nav a {
+            color: blue;
+            text-decoration: underline;
+            margin-right: 10px;
+        }
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            margin: 20px 0 10px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: block;
+        }
+        .caption {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 2rem; margin-bottom: 5px; }
+        h2 { font-size: 1.5rem; margin-top: 25px; margin-bottom: 10px; }
+        
+        ol, ul {
+            padding-left: 25px;
+            margin: 5px 0;
+        }
+        li {
+            margin-bottom: 3px;
+        }
+        
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #000;
+            outline: none;
             margin-top: 15px;
         }
-        .media-box {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
+        
+        .notice {
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        .footer-note {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .back-to-top {
+            color: blue;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
-    <header id="top">
-        <h1>Информация Омурканов Эмир Бакирович</h1>
-        <nav aria-label="Главное меню">
-            <ul>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#directions">О моих умениях</a></li>
-                <li><a href="#media">Видео и Аудио</a></li>
-                <li><a href="#socials">Переход к соцсетям</a></li>
-            </ul>
+
+    <!-- Шапка и навигация -->
+    <header>
+        <h1>Trail Club</h1>
+        <p>Student hiking club | Classroom example</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Routes</a>
+            <a href="#">Apply for a trip</a>
         </nav>
     </header>
 
+    <!-- Главный баннер -->
     <main>
-        <section id="about">
-            <img src="photo.jfif" alt="Мое фото" width="250" height="350">
-            <h1>ФИО: Омурканов Эмир Бакирович</h1>
-            <h2>Место учёбы: Колледж Ала-тоо</h2>
-            <h3>Обо мне: Учился в лицее. Люблю играть в Dota 2 и Rust.</h3>
-        </section>
-
-        <section id="directions">
-            <h2>Навыки</h2>
-            <table>
-                <caption>Таблица навыков программирования</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Язык программирования</th>
-                        <th scope="col">Процент навыка</th>
-                        <th scope="col">Что я умею</th>
-                        <th scope="col">Где научился</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Python</th>
-                        <td>60%</td>
-                        <td>ООП</td>
-                        <td>Самостоятельно</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Java</th>
-                        <td>30%</td>
-                        <td>Базовые вещи</td>
-                        <td>В колледже Ала-тоо</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">HTML</th>
-                        <td>60%</td>
-                        <td>Таблицы и базовые вещи</td>
-                        <td>В лицее и колледже Ала-тоо</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Новая секция с видео и аудио -->
-        <section id="media">
-            <h2>Мои медиафайлы</h2>
-            <div class="media-container">
+        <h2>Your Next Adventure Starts Here</h2>
+        
+        <!-- Баннер с SVG-графикой вместо эмодзи -->
+        <div class="hero-banner">
+            <svg viewBox="0 0 800 220" width="100%" style="background-color: #e2ece9; display: block;">
+                <!-- Солнце -->
+                <circle cx="620" cy="65" r="22" fill="#f09b37" />
                 
-                <!-- Видео отсек -->
-                <div class="media-box">
-                    <h3>Любимое видео / Геймплей</h3>
-                    <video width="320" height="240" controls preload="none">
-                        <source src="c:\Users\user\Downloads\Bear chasing person down hall meme.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает тег video.
-                    </video>
-                    <p><small>Замените <code>my-video.mp4</code> на путь к вашему файлу.</small></p>
-                </div>
+                <!-- Задняя правая гора -->
+                <polygon points="450,220 580,90 730,220" fill="#2d5349" />
+                
+                <!-- Левая гора -->
+                <polygon points="50,220 220,70 380,220" fill="#446e5c" />
+                <!-- Снежная шапка левой горы -->
+                <polygon points="197,90 220,70 243,90 230,95 220,90 210,95" fill="#ffffff" />
+                
+                <!-- Центральная гора -->
+                <polygon points="250,220 440,50 630,220" fill="#1b3f36" />
+                <!-- Снежная шапка центральной горы -->
+                <polygon points="413,72 440,50 467,72 450,78 440,72 430,78" fill="#ffffff" />
+                
+                <!-- Извилистая тропинка (Оранжевая линия) -->
+                <path d="M 330,220 Q 350,170 390,150 T 440,72" fill="none" stroke="#f09b37" stroke-width="6" stroke-linecap="round" />
+            </svg>
+        </div>
+        
+        <p class="caption"><em>Plan carefully. Travel together. Leave no trace.</em></p>
+        <p>We organize student walks and practice responsible trip planning.</p>
+        
+        <p>
+            <a href="#" style="color: blue;">Compare routes</a> | 
+            <a href="#" style="color: blue;">Apply for a place</a>
+        </p>
 
-                <!-- Аудио отсек -->
-                <div class="media-box">
-                    <h3>Любимый трек</h3>
-                    <audio controls preload="none">
-                        <source src="c:\Users\user\Downloads\ENZRO - Тонули в тумане.mp3" type="audio/mpeg">
-                        Ваш браузер не поддерживает элемент audio.
-                    </audio>
-                    <p><small>Замените <code>my-audio.mp3</code> на путь к вашей музыке.</small></p>
-                </div>
+        <!-- Раздел правил подготовки -->
+        <h2>Before You Go</h2>
+        <ol>
+            <li>Choose a route.
+                <ul>
+                    <li>Check distance and duration.</li>
+                    <li>Read the preparation checklist.</li>
+                </ul>
+            </li>
+            <li>Prepare your equipment.
+                <ul>
+                    <li>Water and food.</li>
+                    <li>Comfortable shoes.</li>
+                    <li>Weather-appropriate clothing.</li>
+                </ul>
+            </li>
+            <li>Complete the application form.</li>
+        </ol>
 
-            </div>
-        </section>
+        <!-- Раскрывающийся блок -->
+        <details>
+            <summary>What does "leave no trace" mean?</summary>
+            <p style="padding-left: 15px; margin-top: 5px; color: #333;">
+                It means respecting nature by minimizing your impact: packing out all trash, keeping wildlife wild, and leaving environment exactly as you found it.
+            </p>
+        </details>
+
+        <!-- Раздел объявлений -->
+        <h2>Club Notice</h2>
+        <p class="notice">Our next planning meeting is on <strong>15 October at 11:30</strong>.</p>
+        <p class="notice"><em>These trips are examples for this assignment; no real booking is available.</em></p>
     </main>
 
-    <footer id="socials">
-        <p>Связь со мной:</p>
-        <a href="https://www.instagram.com/reedytin?stkn=czRtcjEyd3Q3YW02&utm_source=qr" target="_blank" rel="noopener noreferrer">Ссылка на Instagram</a>
+    <!-- Подвал страницы -->
+    <footer>
+        <p class="footer-note">Trail Club | Fictional trips and prices for HTML practice</p>
+        <a href="#" class="back-to-top">Back to top ↑</a>
     </footer>
+
 </body>
 </html>
